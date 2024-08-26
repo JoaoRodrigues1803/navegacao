@@ -1,8 +1,8 @@
-import { Text, View, Button, Image } from 'react-native';
+import { Text, View, Button, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const MenuNav = createStackNavigator
+const MenuNav = createStackNavigator();
 
 import TelaJavaScript from  "./TelaJavaScript"
 import TelaNode from "./TelaNode"
@@ -12,9 +12,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <MenuNav.Navigator>
-        <MenuNav.Screen name="Java Script" components={TelaJavaScript} />
-        <MenuNav.Screen name="Node" components={TelaNode} />
-        <MenuNav.Screen name="React" components={TelaReact} />
+        <MenuNav.Screen name="Java Script" component={TelaJavaScript} />
+        <MenuNav.Screen name="Node" component={TelaNode} />
+        <MenuNav.Screen name="React" component={TelaReact} />
       </MenuNav.Navigator>
     </NavigationContainer>
   );
